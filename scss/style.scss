@@ -6,6 +6,19 @@ $secondary: #F38120;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: $text;
+    &:before, &:after {
+        box-sizing: border-box;
+    }
+}
+
+.container{
+    max-width: 72.73vw;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 @import 'header.scss';
