@@ -1,0 +1,12 @@
+$text: #1C1C1C;
+$primary: #12C868;
+$secondary: #F38120;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import 'header.scss';
+@import 'main.scss';
