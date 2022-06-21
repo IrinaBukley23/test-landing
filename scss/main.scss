@@ -28,14 +28,19 @@ main {
         @media (max-width: 576px) {
             position: fixed;
             left: 20%;
-            bottom: -25%;
+            bottom: -300px;
             overflow: hidden;
             width: 60%;
             padding: 23px;
+            border-radius: 20px;
             transition: all 0.3s ease 0s;
             &.active {
                 bottom: 0;
             }
+        }
+        @media (max-width: 400px) {
+            left: 10%;
+            width: 80%;
         }
         .plus {
             display: none;
@@ -64,13 +69,13 @@ main {
                 font-weight: 300;
                 font-size: 0.71vw;
                 line-height: 1.11vw;
-                text-align: center;
                 @media (max-width: 992px) {
                     font-size: 10px;
                 }
                 @media (max-width: 576px) {
-                    font-size: 10px;
+                    font-size: 12px;
                     line-height: 15px;
+                    margin-bottom: 28px;
                 }
                 span {
                     font-weight: 700;

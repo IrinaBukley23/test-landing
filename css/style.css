@@ -499,15 +499,22 @@ main aside {
   main aside {
     position: fixed;
     left: 20%;
-    bottom: -25%;
+    bottom: -300px;
     overflow: hidden;
     width: 60%;
     padding: 23px;
+    border-radius: 20px;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
   main aside.active {
     bottom: 0;
+  }
+}
+@media (max-width: 400px) {
+  main aside {
+    left: 10%;
+    width: 80%;
   }
 }
 main aside .plus {
@@ -544,7 +551,6 @@ main aside .sidebar__item {
   font-weight: 300;
   font-size: 0.71vw;
   line-height: 1.11vw;
-  text-align: center;
 }
 @media (max-width: 992px) {
   main aside .sidebar__item {
@@ -553,8 +559,9 @@ main aside .sidebar__item {
 }
 @media (max-width: 576px) {
   main aside .sidebar__item {
-    font-size: 10px;
+    font-size: 12px;
     line-height: 15px;
+    margin-bottom: 28px;
   }
 }
 main aside .sidebar__item span {
