@@ -42,8 +42,8 @@ header .menu__list-item a {
   line-height: 140%;
   letter-spacing: 0.05em;
   border-bottom: 0px solid #F38120;
-  -webkit-transition: all 0.6s;
-  transition: all 0.6s;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 header .menu__list-item a:hover {
   border-bottom: 1px solid #F38120;
@@ -158,6 +158,36 @@ header .wrapper .header__social-links {
 }
 header .wrapper .header__social-link {
   margin: 0 7px;
+  position: relative;
+  -webkit-perspective: 50em;
+          perspective: 50em;
+}
+header .wrapper .header__social-link:after {
+  margin: 0 -7px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border: 2px solid #ffffff;
+  content: "";
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+header .wrapper .header__social-link:before {
+  color: #ffffff;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+header .wrapper .header__social-link:hover, header .wrapper .header__social-link:active, header .wrapper .header__social-link.hover {
+  color: #F38120;
+}
+header .wrapper .header__social-link:hover:after, header .wrapper .header__social-link:active:after, header .wrapper .header__social-link.hover:after {
+  border-color: transparent #F38120;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 header .wrapper .header__contact-shedule {
   margin-bottom: 6px;
@@ -178,6 +208,7 @@ header .wrapper .header__contact-tel {
 }
 header .wrapper .header__contact-popup {
   text-align: center;
+  cursor: pointer;
 }
 header .wrapper .header__contact-popup span {
   font-size: 12px;
@@ -267,6 +298,8 @@ main .promo__btns-left, main .promo__btns-right {
           align-items: center;
   border: none;
   cursor: pointer;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 main .promo__btns-left span, main .promo__btns-right span {
   margin-right: 31px;
@@ -275,24 +308,46 @@ main .promo__btns-left span, main .promo__btns-right span {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #FFFFFF;
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
 }
 main .promo__btns-left .arrow, main .promo__btns-right .arrow {
   height: 20px;
   width: 20px;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 main .promo__btns-left .arrow img, main .promo__btns-right .arrow img {
   width: 100%;
+}
+main .promo__btns-left:hover span, main .promo__btns-right:hover span {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+main .promo__btns-left:hover .arrow, main .promo__btns-right:hover .arrow {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
 }
 main .promo__btns-left {
   margin-right: 18px;
   background-color: #12C868;
   -webkit-box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
           box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+main .promo__btns-left:hover {
+  background: #21E27C;
 }
 main .promo__btns-right {
   background-color: #F38120;
   -webkit-box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
           box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
+  -webkit-transition: all 0.45s ease-in-out;
+  transition: all 0.45s ease-in-out;
+}
+main .promo__btns-right:hover {
+  background: #FD9C49;
 }
 main .promo__info {
   display: -webkit-box;
@@ -335,4 +390,130 @@ main .circles .circle .third {
 }
 main .circles .circle .fourth {
   border: 1.5px solid rgba(18, 200, 104, 0.25);
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.popup__content {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 27.78vw;
+  background-color: #ffffff;
+  padding: 70px 97px;
+  border-radius: 35px;
+}
+.popup__close {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 2.6rem;
+  color: #1C1C1C;
+  border: none;
+  background: transparent;
+  opacity: 0.5;
+}
+.popup__form-title {
+  margin-bottom: 14px;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #000000;
+}
+.popup__form-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+}
+.popup__form-descr span {
+  margin: 24px 0 28px 0;
+  display: block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  color: #000000;
+}
+.popup__form label {
+  display: block;
+  padding: 0 0 12px 46px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  opacity: 0.75;
+}
+.popup__form label span {
+  color: #F38120;
+}
+.popup__form-tel {
+  margin-bottom: 24px;
+  padding: 24px 46px;
+  display: block;
+  width: 100%;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+  border-radius: 500px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #A7A7A7;
+}
+.popup__form-btn {
+  margin-bottom: 19px;
+  padding: 32px 83px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border: none;
+  background: #F38120;
+  -webkit-box-shadow: inset 0px 0px 17px rgba(255, 255, 255, 0.25);
+          box-shadow: inset 0px 0px 17px rgba(255, 255, 255, 0.25);
+  border-radius: 500px;
+  text-align: center;
+}
+.popup__form-btn span {
+  color: #ffffff;
+  padding-right: 20px;
+}
+.popup__form-notice {
+  display: none;
+  text-align: center;
+  color: #1ab61a;
+  font-size: 26px;
+  font-weight: 700;
+  padding-top: 50px;
+}
+.popup__form .input__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__form .input__block label {
+  padding: 0 0 0 24px;
 }

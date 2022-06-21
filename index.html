@@ -132,7 +132,9 @@
                     <button class="promo__btns-right">
                        <span> записаться на <br>
                         просмотр объектов </span>
-                        <img src="./img/icons/arrow.png" alt="arrow">
+                        <div class="arrow">
+                            <img src="./img/icons/arrow.png" alt="arrow">
+                        </div>
                     </button>
                 </div>
                 <div class="promo__info">
@@ -147,7 +149,27 @@
             </section>
         </div>
     </main>
-
+    <div class="popup">
+        <div class="popup__content">
+            <button class="popup__close">&times;</button>
+        <form action="" class="popup__form">
+            <h3 class="popup__form-title">Быстро
+                оставить заявку</h3>
+            <div class="popup__form-descr">
+                <p>Введите номер, мы позвоним вам в течение 10 минут в рабочее время</p>
+                <span>Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</span>
+            </div>
+            <label for="">Введите номер телефона</label>
+            <input class="popup__form-tel" placeholder="+7 (___) ___-__-__" type="tel" required>
+            <button class="popup__form-btn" type="submit"> <span>Позвоните мне</span> <img src="./img/icons/arrow-r.png" alt="arrow"></button>
+            <div class="input__block">
+                <input type="checkbox" name="" id="" required>
+                <label for="">Нажимая кнопку вы соглашаетесь  с условиями <span>Политики конфиденциальности</span> </label>
+            </div>
+        </form>
+        <p class="popup__form-notice">Спасибо! Ваша заявка отправлена!</p>
+        </div>
+    </div>
     <script src="./js/script.js"></script>
 </body>
 </html>

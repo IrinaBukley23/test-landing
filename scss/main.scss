@@ -67,6 +67,7 @@ main {
                 align-items: center;
                 border: none;
                 cursor: pointer;
+                transition: all 0.6s;
                 span {
                     margin-right: 31px;
                     font-size: 14px;
@@ -74,12 +75,22 @@ main {
                     letter-spacing: 0.02em;
                     text-transform: uppercase;
                     color: #FFFFFF;
+                    transition: all 0.45s ease-in-out;
                 }
                 .arrow {
                     height: 20px;
                     width: 20px;
+                    transition: all 0.6s;
                     img {
                         width: 100%;
+                    }
+                }
+                &:hover {
+                    span {
+                        transform: translateX(5px);
+                    }
+                    .arrow {
+                        transform: translateX(-5px);
                     }
                 }
             }
@@ -87,10 +98,18 @@ main {
                 margin-right: 18px;
                 background-color: $primary;
                 box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
+                transition: all 0.45s ease-in-out;
+                &:hover {
+                    background: #21E27C;
+                }
             }
             &-right {
                 background-color: $secondary;
                 box-shadow: inset 0px 0px 22px rgba(255, 255, 255, 0.25);
+                transition: all 0.45s ease-in-out;
+                &:hover {
+                    background: #FD9C49;
+                }
             }
         }
         &__info {
