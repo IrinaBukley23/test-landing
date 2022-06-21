@@ -85,3 +85,12 @@ window.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+// sidebar
+
+const plus = document.querySelector('.plus');
+const panel = document.querySelector('aside');
+
+plus.addEventListener('click', () => {
+    panel.classList.toggle('active');
+})

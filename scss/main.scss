@@ -16,6 +16,7 @@ main {
         }
     }
     aside {
+        position: relative;
         margin-right: 3.59vw;
         margin-top: 50px;
         padding: 2.07vw 1.62vw 0;
@@ -31,6 +32,31 @@ main {
             overflow: hidden;
             width: 60%;
             padding: 23px;
+            transition: all 0.3s ease 0s;
+            &.active {
+                bottom: 0;
+            }
+        }
+        .plus {
+            display: none;
+            @media (max-width: 576px) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                top: 4%;
+                left: 82%;
+                font-size: 29px;
+                color: #ffffff;
+                background-color: $secondary;
+                border-radius: 100%;
+                width: 33px;
+                height: 33px;
+                &:hover {
+                    width: 36px;
+                    height: 36px;
+                }
+            }
         }
         .sidebar {
             &__item {
@@ -48,6 +74,11 @@ main {
                 }
                 span {
                     font-weight: 700;
+                }
+            }
+            .first {
+                @media (max-width: 576px) {
+                    width: 80%;
                 }
             }
         }
