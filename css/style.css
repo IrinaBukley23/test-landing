@@ -110,7 +110,7 @@ header .menu__list-item {
   margin-bottom: 20px;
 }
 header .menu__list-item a {
-  padding-bottom: 2.02vw;
+  padding-bottom: 58px;
   text-transform: uppercase;
   font-weight: 500;
   font-size: 0.71vw;
@@ -503,7 +503,7 @@ main .container {
 main aside {
   position: relative;
   margin-right: 3.59vw;
-  margin-top: 50px;
+  margin-top: 5.99vw;
   padding: 2.07vw 1.62vw 0;
   width: 12.63vw;
   background-color: #ffffff;
@@ -601,6 +601,7 @@ main aside:before {
   border-radius: 1.01vw 1.01vw 0 0;
 }
 main .promo__title {
+  margin-top: 4.38vw;
   margin-bottom: 0.96vw;
   width: 36.79vw;
   padding-top: 30px;
@@ -613,7 +614,7 @@ main .promo__title {
   main .promo__title {
     text-align: center;
     width: 90%;
-    margin: auto;
+    margin: 34px auto 0;
     font-size: 18px;
   }
 }
