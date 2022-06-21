@@ -1,12 +1,12 @@
 main {
-    margin-top: -19.03vw;
-    background: url('../img/main-bg.jpg') no-repeat top/100% ;
+    margin-top: -22.03vw;
+    background: url('../img/main-bg.jpg') no-repeat;
+    background-attachment: local;
+    background-position: top;
+    background-size: cover;
     min-height: 100vh;
     padding: 14.55vw 0 0 0;
     @media (max-width: 576px) {
-        background-attachment: local;
-        background-position: top;
-        background-size: cover;
         position: relative;
     }
     .container {
@@ -28,7 +28,7 @@ main {
         @media (max-width: 576px) {
             position: fixed;
             left: 20%;
-            bottom: -300px;
+            bottom: -200px;
             overflow: hidden;
             width: 60%;
             padding: 23px;

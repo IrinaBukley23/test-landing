@@ -16,6 +16,11 @@
         background-color: #ffffff;
         padding: 3.54vw 4.90vw;
         border-radius: 1.77vw;
+        @media (max-width: 576px) {
+            width: 80%;
+            height: auto;
+            padding: 25px;
+        }
     }
     &__close {
         position: absolute;
@@ -36,6 +41,11 @@
             text-align: center;
             letter-spacing: 0.02em;
             color: #000000;
+            @media (max-width: 576px) {
+                font-size: 16px;
+                line-height: 16px;
+                margin-bottom: 12px;
+            }
         }
         &-descr {
             font-weight: 400;
@@ -45,6 +55,11 @@
             color: #000000;
             @media (max-width: 992px) {
                 font-size: 10px;
+            }
+            @media (max-width: 576px) {
+                font-size: 12px;
+                line-height: 14px;
+                margin-bottom: 12px;
             }
             span {
                 margin: 1.21vw 0 1.41vw 0;
@@ -56,6 +71,7 @@
                 color: #000000;
                 @media (max-width: 992px) {
                     font-size: 9px;
+                    margin-top: 12px;
                 }
             }
         }
@@ -69,6 +85,11 @@
             opacity: 0.75;
             @media (max-width: 992px) {
                 font-size: 9px;
+            }
+            @media (max-width: 576px) {
+                font-size: 10px;
+                line-height: 14px;
+                margin-bottom: 6px;
             }
             span {
                 color: $secondary;
@@ -88,6 +109,9 @@
             color: #A7A7A7;
             @media (max-width: 992px) {
                 font-size: 10px;
+            }
+            @media (max-width: 576px) {
+                margin-bottom: 10px;
             }
         }
         &-btn {
@@ -114,6 +138,9 @@
                 width: 2.02vw;
                 height: 2.02vw;
             }
+            @media (max-width: 576px) {
+                margin-bottom: 12px;
+            }
         }
         &-notice {
             display: none;
@@ -122,12 +149,21 @@
             font-size: 1.31vw;
             font-weight: 700;
             padding-top: 2.53vw;
+            @media (max-width: 576px) {
+                font-size: 16px;
+                line-height: 14px;
+            }
         }
         .input__block {
             display: flex;
             align-items: center;
             label {
                 padding: 0 0 0 1.21vw;
+                @media (max-width: 576px) {
+                    padding: 0 0 0 10px;
+                    font-size: 8px;
+                    line-height: 10px;
+                }
             }
         }
     }

@@ -99,7 +99,7 @@ header {
             z-index: 3;
             width: 80%;
             height: 100%;
-            padding: 60px 0 0 0;
+            padding: 120px 0 0 0;
             background-color: #EDF2F5;;
             overflow: auto;
             opacity: 0.95;
@@ -169,19 +169,22 @@ header {
             }
         }
         .header__logo {
+            @media (max-width: 576px) {
+                width: initial;
+                z-index: 4;
+                width: 105px;
+                height: 85px;
+            }
             &-link {
                 width: 15.66vw;
                 height: 7.53vw;
-                img {
-                    width: 100%;
-                }
-                @media (max-width: 400px) {
+                @media (max-width: 576px) {
                     width: 75px;
                     height: 52px;
-                    margin-left: -10px;
-                    img {
-                        width: 100%;
-                    }
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -295,10 +298,7 @@ header {
             }
         }
         .header__contact {
-            @media (max-width: 400px) {
-                font-size: 7px;
-                line-height: 9px;
-            }
+            z-index: 4;
             &-shedule {
                 margin-bottom: 0.30vw;
                 font-size: 0.61vw;
@@ -310,6 +310,11 @@ header {
                 }
                 @media (max-width: 796px) {
                     letter-spacing: 0;
+                }
+                @media (max-width: 576px) {
+                    font-size: 7px;
+                    line-height: 9px;
+                    letter-spacing: 0.02em;
                 }
                 span {
                     font-weight: 700;
@@ -323,6 +328,12 @@ header {
                 letter-spacing: 0.05em;
                 @media (max-width: 992px) {
                     font-size: 10px;
+                }
+                @media (max-width: 576px) {
+                    font-size: 12px;
+                    line-height: 17px;
+                    text-align: center;
+                    letter-spacing: 0.05em;
                 }
             }
             &-popup {
